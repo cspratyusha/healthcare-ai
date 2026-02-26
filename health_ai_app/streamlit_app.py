@@ -5,13 +5,13 @@ from typing import Any, Dict, Optional
 
 import streamlit as st
 
-from .extraction import extract_report_data
-from .interpretation import generate_lab_interpretation
-from .navigation import generate_navigation_guidance
-from .reference_ranges import get_lab_statuses
-from .safety import check_red_flags
-from .symptom_engine import analyze_symptoms
-from .utils import format_value, summarize_status
+from extraction import extract_report_data
+from interpretation import generate_lab_interpretation
+from navigation import generate_navigation_guidance
+from reference_ranges import get_lab_statuses
+from safety import check_red_flags
+from symptom_engine import analyze_symptoms
+from utils import format_value, summarize_status
 
 
 PAGE_TITLE = "AI Health Report Interpretation Assistant"

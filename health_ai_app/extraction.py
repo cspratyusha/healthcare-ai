@@ -12,7 +12,10 @@ try:
 except Exception:  # pragma: no cover - pytesseract might not be installed at runtime
     pytesseract = None  # type: ignore
 
-from .utils import clean_text, safe_float, normalize_gender
+try:  # pragma: no cover - depends on execution context
+    from .utils import clean_text, safe_float, normalize_gender  # type: ignore
+except ImportError:
+    from utils import clean_text, safe_float, normalize_gender
 
 
 HEMOGLOBIN_PATTERN = re.compile(
